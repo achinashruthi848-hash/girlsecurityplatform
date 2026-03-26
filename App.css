@@ -1,0 +1,19 @@
+:root {
+  --primary: #e02141;
+  --bg: #07121b;
+  --card: #0f2c3f;
+  --text: #f5f9fc;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; }
+.app-container { max-width: 860px; margin: 2rem auto; padding: 1rem; }
+h1 { text-align: center; }
+.panel { background: var(--card); border-radius: 12px; padding: 1rem; margin-top: 1rem; }
+form { display: flex; gap: 0.5rem; margin-bottom: 0.7rem; }
+input { flex: 1; padding: 0.6rem 0.8rem; border: 1px solid #285366; border-radius: 8px; background:#11263a; color: #fff; }
+button { border: none; border-radius: 8px; padding: 0.6rem 0.8rem; background: var(--primary); color: white; cursor: pointer; }
+button:hover { opacity: 0.95; }
+ul { list-style: none; padding: 0; }
+li { display:flex; justify-content: space-between; align-items:center; padding: 0.45rem 0; }
+.sos { width: 100%; background: #ff3b4f; font-weight:700; }

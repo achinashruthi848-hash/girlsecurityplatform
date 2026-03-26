@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHer - Girl Security Web Application</title>
+    <meta name="description" content="SafeHer - Your Safety, Our Priority. Fast emergency SOS, location tracking, and emergency contacts.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-shield-heart"></i> SafeHer
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#emergency">Emergency</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#helpline">Helpline</a></li>
+            <li><a href="#tips">Tips</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="gradient-text">SafeHer</h1>
+                <h2>Your Safety, Our Priority</h2>
+                <p>One tap to alert your trusted contacts with your live location. Empowering women with instant security and emergency resources at their fingertips.</p>
+                <a href="#emergency" class="btn primary-btn">Go to SOS</a>
+            </div>
+            <div class="hero-image">
+                <i class="fa-solid fa-person-dress-burst main-icon"></i>
+            </div>
+        </section>
+
+        <!-- Emergency SOS Section -->
+        <section id="emergency" class="sos-section">
+            <h2>Emergency SOS</h2>
+            <p>Tap the button below in case of an emergency to alert your contacts and send your location.</p>
+            <button id="sos-btn" class="sos-button">
+                <span>SOS</span>
+            </button>
+            <audio id="alert-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="location-section">
+            <h2>Live Location Tracking</h2>
+            <div class="location-card">
+                <div class="location-icon">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                </div>
+                <div id="location-details">
+                    <p>Click the SOS button to fetch and share your live location.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contacts Section -->
+        <section id="contacts" class="contacts-section">
+            <h2>Emergency Contacts</h2>
+            <div class="contacts-container">
+                <div class="add-contact">
+                    <h3>Add Contact</h3>
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="contact-name" placeholder="Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="contact-phone" placeholder="Phone Number" required pattern="[0-9+ ]{10,15}" title="Please enter a valid phone number, e.g. 9876543210">
+                        </div>
+                        <button type="submit" class="btn secondary-btn">Save Contact</button>
+                    </form>
+                </div>
+                <div class="saved-contacts">
+                    <h3>Saved Contacts</h3>
+                    <ul id="contacts-list">
+                        <!-- Contacts dynamically appended here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Helpline Section -->
+        <section id="helpline" class="helpline-section">
+            <h2>National Helplines (India)</h2>
+            <div class="helpline-grid">
+                <div class="helpline-card">
+                    <i class="fa-solid fa-person-dress helpline-icon"></i>
+                    <h3>Women Helpline</h3>
+                    <p class="number">181</p>
+                    <a href="tel:181" class="call-btn">Call Now</a>
+                </div>
+                <div class="helpline-card">
+                    <i class="fa-solid fa-shield-halved helpline-icon"></i>
+                    <h3>Police</h3>
+                    <p class="number">100</p>
+                    <a href="tel:100" class="call-btn">Call Now</a>
+                </div>
+                <div class="helpline-card">
+                    <i class="fa-solid fa-truck-medical helpline-icon"></i>
+                    <h3>Ambulance</h3>
+                    <p class="number">108</p>
+                    <a href="tel:108" class="call-btn">Call Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Tips Section -->
+        <section id="tips" class="tips-section">
+            <h2>Safety Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Stay Alert</h3>
+                    <p>Always be aware of your surroundings. Avoid using your phone endlessly in isolated or poorly lit areas.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3>Share Location</h3>
+                    <p>Always share your live cab or transport location with a trusted friend or family member before traveling.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-battery-full"></i></div>
+                    <h3>Keep Phone Charged</h3>
+                    <p>Ensure your mobile phone has enough battery and call credit before heading out.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Trust Instincts</h3>
+                    <p>If you feel uncomfortable or unsafe, leave the area immediately or move towards a populated place.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-spray-can"></i></div>
+                    <h3>Self Defense</h3>
+                    <p>Carry pepper spray or know basic self-defense moves for emergencies. Be prepared to defend yourself.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fa-solid fa-route"></i></div>
+                    <h3>Plan the Route</h3>
+                    <p>Know exactly where you are going and avoid unlit or deserted routes, especially late at night.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SafeHer Web Application. Designed for Safety.</p>
+    </footer>
+
+    <!-- Custom Modal for Alerts -->
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-icon" id="modal-icon-container"><i class="fa-solid fa-circle-check"></i></div>
+            <h3 id="modal-title">Alert Sent!</h3>
+            <p id="modal-desc">Emergency Alert Sent Successfully.</p>
+            <button id="close-modal" class="btn primary-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
